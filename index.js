@@ -13,7 +13,7 @@ var io = require("socket.io")(server);
 var createdRooms = new Array();
 
 var io2 = require('socket.io-client');
-var socket = io2.connect("http://localhost:5000");
+var socket = io2.connect("https://pacific-cliffs-67186.herokuapp.com");
 
 io.on("connection", function(socket) {
     console.log("New client connected");
