@@ -54,11 +54,11 @@ class Room extends Component {
             <header class="header">
                 <span class="addRoomIcon"></span>
             </header>
-            <ul ref={this.ulRef} style={{width: "500px", height: "500px", backgroundColor: "gray", border: "5px solid black", overflowY: "scroll"}}>
+            <ul ref={this.ulRef} style={{width: "500px", height: "500px", backgroundColor: "#eaeaea", border: "5px solid black", overflowY: "scroll"}}>
                 
             </ul>
                 <input ref={this.inputRef} onKeyPress={this.enterPressed.bind(this)} type="text" style={{width: "500px"}}></input>
-                <button ref={this.submitRef} type="button" onClick={this.sendMessage.bind()}>asdfadsf</button>
+                <button ref={this.submitRef} type="button" onClick={this.sendMessage.bind()}>Send</button>
         </div>
     );
   }

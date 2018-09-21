@@ -42,7 +42,7 @@ class Main extends Component {
     return (
         <div>
             <header class="header">
-                <span class="addRoomIcon"><a href="#" data-toggle="modal" data-target="#exampleModal">+</a></span>
+                <span class="addRoomIcon"><a href="#" data-toggle="modal" data-target="#exampleModal">Add Room</a></span>
             </header>
 
             <TheList />
