@@ -3,8 +3,15 @@ const path = require('path');
 
 const app = express();
 
+var cors = require('cors');
+app.use(cors());
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true }));
+
 // Serve the static files from the React app
-// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 const port = process.env.PORT || 5000;
 var server = app.listen(port);
@@ -52,6 +59,7 @@ io.on("connection", function(socket) {
   });
 
   app.post('/create-room', function(req, res, next) {
+    console.log(req.body);
     socket.emit('createRoom', req.body.roomName);
     res.redirect('back');
   });
